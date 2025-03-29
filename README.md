@@ -63,6 +63,19 @@ Top-Level 模組，主要是將 i2cs_fsm.v 與 i2cs_raxi_reg.v 整合在一起:
 
 因為通常 I2C 的 SDA 會是 雙向（bidirectional），所以在 FPGA 裡會用到 sda_in 與 sda_oe 這樣的設計方式。sda_oe 為 1 時代表 Slave 要拉低 SDA（輸出），否則就呈現 Hi-Z，交由外部上拉。
 
+## 模擬 （iverilog / gtkwave）
+
+1. iverilog / gtkwave :
+```
+ iverilog -o simulation i2cs_fsm.v i2c_slave_top.v i2cs_raxi_reg.v tb_i2c_slave.v
+
+ vvp simulation
+```
+
+2.用 gtkwave 觀察波形
+
+![image](https://github.com/user-attachments/assets/041de813-5130-4848-b483-53a335ea531b)
+
 
 
 
