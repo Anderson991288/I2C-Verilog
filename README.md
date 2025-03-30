@@ -76,7 +76,7 @@ Top-Level 模組，主要是將 i2cs_fsm.v 與 i2cs_raxi_reg.v 整合在一起:
 
 ![image](https://github.com/user-attachments/assets/041de813-5130-4848-b483-53a335ea531b)
 
-
+-
 
 
 
